@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
-    <!-- bootstrap link of CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- font link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <title>Mortgage Calculator</title>
 </head>
-
 <body>
     <main>
         <div class="container"> <!-- main box and it have two childs  -->
-            <div class="portionOfForm"> <!-- child 1  -->
+            <section class="portionOfForm"> <!-- child 1  -->
                 <div class="topLine">
                     <h1>Mortgage Calculator</h1>
                     <button id="clear" class="forHover" type="reset">Clear All</button>
@@ -28,52 +23,51 @@
                 <form id="form1" action="">
                     <label for="amountInput">Mortgage Amount</label>
                     <div class="input-group">
-                        <span class="input-group-text" id="dollarSign"><b>$</b></span>
-                        <input id="amountInput" type="text" class="form-control" aria-label="Username"
-                            aria-describedby="input-group-left" required>
+                        <span class="otherInfo" id="dollarSign"><b>$</b></span>
+                        <input id="amountInput" type="text" class="inputAmount" aria-label="Username">
                     </div>
-                    <div class="uniLiners">
+                    <section class="uniLiners">
                         <div class="mortgageUniLinerBlocks">
                             <label for="mTerm">Mortgage Term</label>
                             <div class="input-group">
-                                <span class="input-group-text"><b>Years</b></span>
-                                <input type="text" class="form-control" aria-label="Username" id="mTerm"
-                                    aria-describedby="input-group-left" required>
+                                <span class="otherInfo" id="years"><b>Years</b></span>
+                                <input type="text" class="textInputs" aria-label="Username" id="mTerm">
                             </div>
                         </div>
                         <div class="mortgageUniLinerBlocks">
                             <label for="intrestRate">Intrest Rate</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" aria-label="Username" id="intrestRate"
-                                    aria-describedby="input-group-right" required>
-                                <span class="input-group-text"><b>%</b></span>
+                                <input type="text" class="textInputs" aria-label="Username" id="intrestRate">
+                                <span class=" otherInfo" id="percentageS"><b>%</b></span>
                             </div>
                         </div>
-                    </div>
-                    <label for="radioButton1"  class="forHover">Mortgage Type</label>
+                    </section>
+                    <p>Mortgage Type</p>
                     <div id="button1">
-                        <input type="radio" name="radioButton" id="radioButton1" class="forHover" required>
-                        <label for="radioButton1" class="forHover"><b>Repayment</b></label>
+                        <input type="radio" name="mortageType" id="repaymentButton" class="forHover">
+                        <label for="repaymentButton" class="forHover"><b>Repayment</b></label>
                     </div>
                     <div id="button2">
-                        <input type="radio" name="radioButton" id="radioButton2" class="forHover" required>
-                        <label for="radioButton2" class="forHover"><b>Intrest Only</b></label>
+                        <input type="radio" name="mortageType" id="intrestButton" class="forHover">
+                        <label for="intrestButton" class="forHover"><b>Intrest Only</b></label>
                     </div>
                     <!-- final button  -->
                     <button id="showOutput" class="forHover" type="submit"> <img src="icon-calculator.svg"
-                            alt="Calculator Image"><b>Calculate Repayments</b></button>
+                            alt="Calculator Image for Button"><b>Calculate Repayments</b></button>
                 </form>
-            </div>
-            <div class="resultSection"> <!-- child 2  -->
+            </section>
+            <section class="resultSection"> <!-- child 2  -->
                 <img src="illustration-empty.svg" alt="image of Illustration">
                 <p id="infoP"><b>Results Show Here</b></p>
-                <p id="description">Complete the form and click on <i>"Calculate Repayments"</i> to see what your monthly repayments whould be.</p>
-            </div>
+                <p id="description">Complete the form and click on <i>"Cal-culate Repayments"</i> to see what your
+                    monthly repayments whould be.</p>
+            </section>
         </div>
     </main>
     <script src="script.js"></script>
+    <script src="logic.js"></script>
     <!-- bootstrap link of JS  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 </html>

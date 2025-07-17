@@ -20,11 +20,15 @@ main {
     background-color: hsl(0, 0%, 100%);
     padding: 0px;
     border-radius: 20px;
-    width: 60vw;
+    width: 65vw;
 
 }
 
 /* styling of form  */
+.portionOfForm {
+    padding-top: 20px;
+}
+
 .forHover:hover {
     cursor: pointer;
 }
@@ -36,13 +40,13 @@ main {
 
 h1 {
     color: hsl(202, 55%, 16%);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin: 0rem;
 }
 
 #clear,
 #showOutput {
     background-color: white;
-    outline: none;
     border: none;
     color: hsl(200, 24%, 40%);
     text-decoration: underline;
@@ -56,13 +60,35 @@ h1 {
 
 }
 
-.input-group-text {
-    background-color: hsl(202, 76%, 87%);
+.textInputs {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    display: inline;
+    /* outline: none; */
+}
+
+.inputAmount {
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    display: inline;
+    /* outline: none; */
+}
+
+.otherInfo {
+    background-color: hsl(202, 86%, 94%);
     color: hsl(200, 24%, 40%);
     padding: 3px;
     padding-left: 5px;
     padding-right: 5px;
 }
+
+p {
+    margin: 0.5em;
+    color: hsl(200, 24%, 40%);
+}
+
 
 #showOutput {
     text-decoration: none;
@@ -89,14 +115,21 @@ h1 {
 }
 
 label {
-    margin: 8px 0px;
+    margin: 0.5rem;
+    margin-bottom: 0rem;
+    color: hsl(200, 24%, 40%);
+}
+
+label,
+p {
+    margin-left: 0rem;
 }
 
 .topLine {
     display: flex;
     flex-direction: row;
-    margin: 10px;
-    margin-bottom: 0;
+    margin: 0.65rem;
+    margin-bottom: 0rem;
     justify-content: space-between;
 }
 
@@ -109,26 +142,34 @@ label {
 .uniLiners {
     display: flex;
     flex-direction: row;
-    margin: 8px 0px;
+    margin: 0.5rem 0rem 0rem 0rem;
     gap: 7px;
 }
 
 #button1,
 #button2,
 .input-group {
-    border: 1px solid hsl(202, 55%, 16%);
     border-radius: 5px;
+    border: 1.5px solid hsl(200, 24%, 40%);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 1.5px solid hsl(200, 24%, 40%);
+    margin-top: 0.5rem;
 }
 
 #button1,
 #button2 {
-    padding: 0 12px;
-    margin: 5px 0px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
 }
 
 #button1 label,
 #button2 label {
-    margin-left: 7px;
+    margin-left: 0.5rem;
 }
 
 /* styling on second child  */
@@ -156,4 +197,226 @@ label {
 
 .resultSection img {
     width: 150px;
+}
+
+/* media quries  */
+@media (max-width:1000px) and (min-width:800px) {
+    .container {
+        width: 80vw;
+    }
+
+    .resultSection {
+        width: 110%;
+    }
+}
+
+@media (max-width:799px) and (min-width:600px) {
+    .container {
+        width: 90vw;
+    }
+
+    .resultSection {
+        padding: 10px;
+        width: 120%;
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    #form1 {
+        padding: 10px;
+    }
+
+    .portionOfForm {
+        padding-top: 0;
+    }
+
+    .topLine {
+        margin-bottom: -15px;
+    }
+
+    #showOutput {
+        width: 100%;
+        transition: none;
+    }
+
+    #showOutput:hover {
+        width: 100%;
+    }
+
+    .amounts {
+        width: 110%;
+    }
+
+    #monthlyAmounts {
+        line-height: normal;
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width:599px) and (min-width:490px) {
+    .container {
+        width: 95vw;
+    }
+
+    .resultSection {
+        padding: 0;
+        font-size: 0.8rem;
+        width: 125%;
+        border-bottom-left-radius: 60px;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+    #form1 {
+        padding: 10px;
+    }
+
+    .portionOfForm {
+        padding-top: 0;
+    }
+
+    .topLine {
+        margin-bottom: -15px;
+    }
+
+    #showOutput {
+        width: 100%;
+        transition: none;
+    }
+
+    #showOutput:hover {
+        width: 100%;
+    }
+
+    .amounts {
+        width: 110%;
+    }
+
+    #monthlyAmounts {
+        line-height: normal;
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width:489px) and (min-width:375px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 100vw;
+    }
+
+    .form-control {
+        padding: 0;
+        padding-right: 12px;
+    }
+
+    .resultSection {
+        padding: 0;
+        font-size: 0.8rem;
+        width: 80%;
+        border-bottom-left-radius: 60px;
+    }
+
+    h1 {
+        margin-left: 10px;
+        font-size: larger;
+    }
+
+    #form1 {
+        padding: 10px;
+        padding-right: 0;
+        padding-left: 5px;
+    }
+
+    .portionOfForm {
+        padding-top: 0;
+    }
+
+    .topLine {
+        margin-bottom: -15px;
+    }
+
+    #showOutput {
+        font-size: 0.85rem;
+        width: 100%;
+        padding: 8px 5px;
+        transition: none;
+    }
+
+    #showOutput:hover {
+        width: 100%;
+        padding: 8px 5px;
+
+    }
+
+    .resultSection img {
+        width: 120px;
+    }
+
+    #button1,
+    #button2 {
+        padding: 0px;
+        padding-left: 6px;
+    }
+
+    .uniLiners {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 0px;
+        margin-bottom: 0;
+        row-gap: -15px;
+    }
+
+    .amounts {
+        width: 110%;
+    }
+
+    #monthlyAmounts {
+        line-height: normal;
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width:374px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .resultSection {
+        border-radius: 0px;
+        width: 100%;
+    }
+
+    .topLine {
+        margin-top: 100px;
+        margin-bottom: -20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #form1 {
+        padding-left: 0;
+        padding: 15px;
+    }
+
+    .amounts {
+        width: 110%;
+    }
+
+    #monthlyAmounts {
+        line-height: normal;
+        font-size: 1.45rem;
+    }
 }

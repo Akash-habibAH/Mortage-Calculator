@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: hsl(202, 55%, 16%);
+        }
+
+        .amounts {
+            background-color: hsl(203, 80%, 10%);
+            color: hsl(200, 26%, 54%);
+            display: flex;
+            flex-direction: column;
+            border-top: 3px solid hsl(61, 70%, 52%);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .description {
+            color: hsl(203, 41%, 72%);
+            text-align: start;
+        }
+
+        #totalAmount,
+        #resultHeading {
+            color: white;
+        }
+
+        #monthlyAmounts {
+            font-size: 2rem;
+            color: hsl(61, 70%, 52%);
+            margin: 0;
+        }
+
+        .monthlyRepayments {
+            border-bottom: 1px solid hsl(203, 41%, 72%);
+            padding-bottom: 20px;
+        }
+
+        .monthlyRepayments p:nth-of-type(1) {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .totalRepyments p:nth-of-type(1) {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .totalRepyments p:nth-of-type(2) {
+            margin-bottom: 0;
+            margin-top: 0;
+
+        }
+        .totalRepyments{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="resultHeading"><b>Your Results</b></p>
+    <!-- <p class="description">Your results are shown based on the information your provided.To adjust the results, edit the
+        form and click on
+        <b>"Calculate Repayments"</b> again.
+    </p> -->
+    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium fuga alias animi tenetur rem beatae esse, accusamus maiores excepturi suscipit at odit odio nihil, necessitatibus deleniti sapiente autem delectus saepe distinctio eligendi, earum totam minus maxime consequuntur! Deserunt, consectetur! Exercitationem dolore omnis doloremque obcaecati nam at, impedit, perspiciatis, aspernatur sint magnam qui necessitatibus repudiandae iste. Obcaecati voluptatem corporis voluptas ratione, nemo id ipsam facere. Aspernatur fugiat excepturi doloribus, recusandae consequuntur voluptates natus numquam quasi consequatur soluta explicabo quae fugit perferendis, dolor perspiciatis esse et. Eveniet cumque nemo asperiores animi tempora doloremque, maiores itaque blanditiis sint! Aperiam maxime consequuntur maiores quidem!</p>
+    <div class="amounts">
+        <div class="monthlyRepayments">
+            <p>Your Monthly Repayments</p>
+            <p id="monthlyAmounts">monthly amounts</p>
+        </div>
+        <div class="totalRepyments">
+            <p>Totally you will repay over the term</p>
+            <p id="totalAmount"><b>total amount</b></p>
+        </div>
+    </div>
+</body>
+
+</html>
