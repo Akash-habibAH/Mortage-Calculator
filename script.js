@@ -181,3 +181,4 @@ clearButton.addEventListener("click", () => {
     clearStyles(); // reset styles and remove errors
     descriptionRsults();// call this function if user set form output section come in its default state  
 });
+
